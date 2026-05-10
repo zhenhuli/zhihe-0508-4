@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Book {
+  id              String             @id @default(uuid())
+  title           String
+  author          String
+  coverColor      String             @default("#64748b")
+  coverImage      String?
+  totalPages      Int
+  currentPage     Int                @default(0)
+  status          String             @default("NOT_STARTED")
+  genre           String?
+  description     String?
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+  readingSessions ReadingSession[]
+  reviews         Review[]
+  progressHistory ProgressHistory[]
+}
+
+
+
+model ReadingSession {
+  id        String   @id @default(uuid())
+  bookId    String
+  startPage Int
+  endPage   Int
+  duration  Int
+  date      DateTime @default(now())
+  note      String?
+  book      Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+}
+
+model Review {
+  id        String   @id @default(uuid())
+  bookId    String
+  content   String
+  rating    Int
+  createdAt DateTime @default(now())
+  book      Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+}
+
+model ProgressHistory {
+  id          String   @id @default(uuid())
+  bookId      String
+  currentPage Int
+  percentage  Float
+  date        DateTime @default(now())
+  book        Book     @relation(fields: [bookId], references: [id], onDelete: Cascade)
+}
