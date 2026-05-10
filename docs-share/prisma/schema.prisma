@@ -1,0 +1,46 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Document {
+  id           String    @id @default(uuid())
+  name         String
+  originalName String
+  size         Int
+  type         String
+  path         String
+  uploaderId   String?
+  isPublic     Boolean   @default(false)
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  shares       Share[]
+}
+
+model Share {
+  id           String   @id @default(uuid())
+  documentId   String
+  token        String   @unique
+  accessType   String   @default("LINK_ONLY")
+  password     String?
+  expiresAt    DateTime?
+  isActive     Boolean  @default(true)
+  viewCount    Int      @default(0)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  document     Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  history      ShareStatusHistory[]
+}
+
+model ShareStatusHistory {
+  id        String   @id @default(uuid())
+  shareId   String
+  isActive  Boolean
+  remark    String?
+  createdAt DateTime @default(now())
+  share     Share    @relation(fields: [shareId], references: [id], onDelete: Cascade)
+}
