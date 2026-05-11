@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音乐频谱可视化</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="visualizer-container">
+        <canvas id="visualizer"></canvas>
+      </div>
+      
+      <div class="controls">
+        <div class="file-control">
+          <label for="fileInput" class="btn btn-primary">
+            选择音乐文件
+          </label>
+          <input type="file" id="fileInput" accept="audio/*" multiple />
+        </div>
+        
+        <div class="playlist" id="playlist"></div>
+        
+        <div class="play-controls">
+          <button id="prevBtn" class="btn">⏮</button>
+          <button id="playPauseBtn" class="btn btn-lg">▶</button>
+          <button id="nextBtn" class="btn">⏭</button>
+        </div>
+        
+        <div class="progress">
+          <span id="currentTime">0:00</span>
+          <input type="range" id="progressBar" min="0" max="100" value="0" />
+          <span id="duration">0:00</span>
+        </div>
+        
+        <div class="volume">
+          <label>音量:</label>
+          <input type="range" id="volumeBar" min="0" max="100" value="80" />
+        </div>
+        
+        <div class="visual-mode">
+          <label>可视化模式:</label>
+          <select id="modeSelect">
+            <option value="bar">柱状图</option>
+            <option value="wave">波浪线</option>
+            <option value="mirror">镜像柱状</option>
+            <option value="circle">圆形频谱</option>
+            <option value="doubleCircle">双环频谱</option>
+            <option value="particles">音乐粒子</option>
+            <option value="spectrum3D">频谱圆</option>
+            <option value="spiral">螺旋旋涡</option>
+          </select>
+        </div>
+        
+        <div class="theme-controls">
+          <label>主题颜色:</label>
+          <select id="presetTheme">
+            <option value="neon">霓虹灯</option>
+            <option value="ocean">海洋</option>
+            <option value="sunset">日落</option>
+            <option value="forest">森林</option>
+            <option value="purple">紫色梦幻</option>
+            <option value="custom">自定义</option>
+          </select>
+          
+          <div id="customColors" style="display: none;">
+            <input type="color" id="color1" value="#00ffff" />
+            <input type="color" id="color2" value="#ff00ff" />
+            <input type="color" id="color3" value="#00ff00" />
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
