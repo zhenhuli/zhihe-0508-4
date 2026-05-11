@@ -1,0 +1,61 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  border-radius: 50% 50% 50% 50% / 45% 45% 55% 55%;
+  animation: float-balloon ease-in-out infinite;
+}
+
+.balloonKnot {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 12px solid;
+}
+
+.balloonShine {
+  position: absolute;
+  top: 15%;
+  left: 20%;
+  width: 30%;
+  height: 30%;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+
+@keyframes float-balloon {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  25% {
+    transform: translateY(-25vh) translateX(var(--sway)) scale(1);
+  }
+  50% {
+    transform: translateY(-50vh) translateX(calc(var(--sway) * -1)) scale(0.95);
+  }
+  75% {
+    transform: translateY(-75vh) translateX(var(--sway)) scale(1);
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-110vh) translateX(0) scale(0.8);
+    opacity: 0;
+  }
+}

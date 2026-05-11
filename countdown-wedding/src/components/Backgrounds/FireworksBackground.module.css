@@ -1,0 +1,81 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.firework {
+  position: absolute;
+  width: 0;
+  height: 0;
+  animation: explode 3.5s ease-out infinite;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: particle-fly var(--particle-duration, 1s) ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  5% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes particle-fly {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(
+      calc(cos(var(--angle)) * var(--distance)),
+      calc(sin(var(--angle)) * var(--distance) + 60px)
+    ) scale(0);
+    opacity: 0;
+  }
+}
+
+.particle:nth-child(1) { --angle: 0deg; }
+.particle:nth-child(2) { --angle: 15deg; }
+.particle:nth-child(3) { --angle: 30deg; }
+.particle:nth-child(4) { --angle: 45deg; }
+.particle:nth-child(5) { --angle: 60deg; }
+.particle:nth-child(6) { --angle: 75deg; }
+.particle:nth-child(7) { --angle: 90deg; }
+.particle:nth-child(8) { --angle: 105deg; }
+.particle:nth-child(9) { --angle: 120deg; }
+.particle:nth-child(10) { --angle: 135deg; }
+.particle:nth-child(11) { --angle: 150deg; }
+.particle:nth-child(12) { --angle: 165deg; }
+.particle:nth-child(13) { --angle: 180deg; }
+.particle:nth-child(14) { --angle: 195deg; }
+.particle:nth-child(15) { --angle: 210deg; }
+.particle:nth-child(16) { --angle: 225deg; }
+.particle:nth-child(17) { --angle: 240deg; }
+.particle:nth-child(18) { --angle: 255deg; }
+.particle:nth-child(19) { --angle: 270deg; }
+.particle:nth-child(20) { --angle: 285deg; }
+.particle:nth-child(21) { --angle: 300deg; }
+.particle:nth-child(22) { --angle: 315deg; }
+.particle:nth-child(23) { --angle: 330deg; }
+.particle:nth-child(24) { --angle: 345deg; }

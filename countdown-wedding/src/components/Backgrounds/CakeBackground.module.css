@@ -1,0 +1,130 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cakeWrapper {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.candles {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: -5px;
+  z-index: 2;
+}
+
+.candle {
+  width: 12px;
+  height: 35px;
+  background: linear-gradient(to right, #f5f5dc, #fffacd);
+  border-radius: 3px 3px 0 0;
+  position: relative;
+}
+
+.flame {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 18px;
+  background: linear-gradient(to top, #ff6b35, #ffd700, #fffacd);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: flicker 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(-50%) scale(1.1);
+    opacity: 1;
+  }
+}
+
+.cake {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cakeTop {
+  width: 80px;
+  height: 25px;
+  border-radius: 5px 5px 0 0;
+  position: relative;
+}
+
+.cakeTop::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 15px;
+  background: linear-gradient(to right, #ffd700, #ffec8b);
+  border-radius: 50%;
+}
+
+.cakeMiddle {
+  width: 120px;
+  height: 30px;
+  margin-top: -5px;
+  position: relative;
+}
+
+.cakeMiddle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.cakeBottom {
+  width: 160px;
+  height: 35px;
+  margin-top: -5px;
+  border-radius: 0 0 5px 5px;
+}
+
+.confetti {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 200px;
+  pointer-events: none;
+}
+
+.confettiPiece {
+  position: absolute;
+  top: 0;
+  border-radius: 2px;
+  animation: fall-confetti 4s linear infinite;
+}
+
+@keyframes fall-confetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(250px) rotate(720deg);
+    opacity: 0;
+  }
+}
