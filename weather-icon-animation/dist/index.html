@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>天气图标动画展示</title>
+    <script type="module" crossorigin src="/assets/index-DAq1Q1Vm.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BvGcE2fm.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="header">
+        <h1>天气图标动画展示</h1>
+        <button id="themeToggle" class="theme-toggle" aria-label="切换主题">
+          <span class="theme-icon">🌙</span>
+        </button>
+      </header>
+
+      <main class="main">
+        <div class="weather-display">
+          <div class="weather-icon-container" id="weatherIconContainer">
+          </div>
+          
+          <div class="weather-info">
+            <h2 id="weatherName">晴天</h2>
+            <p id="weatherDescription">阳光明媚，适合外出</p>
+          </div>
+        </div>
+
+        <div class="code-preview-section">
+          <div class="code-header">
+            <h3>CSS 动画代码</h3>
+            <button id="copyCodeBtn" class="copy-btn">
+              <span class="copy-icon">📋</span>
+              <span class="copy-text">复制代码</span>
+            </button>
+          </div>
+          <div class="code-container">
+            <pre><code id="codeContent" class="language-css"></code></pre>
+          </div>
+        </div>
+
+        <div class="weather-selector">
+          <div class="weather-item">
+            <button class="weather-btn active" data-weather="sunny">
+              <span class="btn-icon">☀️</span>
+              <span class="btn-label">晴天</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="sunny" aria-label="复制晴天代码">📋</button>
+          </div>
+          <div class="weather-item">
+            <button class="weather-btn" data-weather="cloudy">
+              <span class="btn-icon">☁️</span>
+              <span class="btn-label">多云</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="cloudy" aria-label="复制多云代码">📋</button>
+          </div>
+          <div class="weather-item">
+            <button class="weather-btn" data-weather="partly-cloudy">
+              <span class="btn-icon">⛅</span>
+              <span class="btn-label">阴转晴</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="partly-cloudy" aria-label="复制阴转晴代码">📋</button>
+          </div>
+          <div class="weather-item">
+            <button class="weather-btn" data-weather="rainy">
+              <span class="btn-icon">🌧️</span>
+              <span class="btn-label">下雨</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="rainy" aria-label="复制下雨代码">📋</button>
+          </div>
+          <div class="weather-item">
+            <button class="weather-btn" data-weather="thunderstorm">
+              <span class="btn-icon">⛈️</span>
+              <span class="btn-label">雷阵雨</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="thunderstorm" aria-label="复制雷阵雨代码">📋</button>
+          </div>
+          <div class="weather-item">
+            <button class="weather-btn" data-weather="snowy">
+              <span class="btn-icon">❄️</span>
+              <span class="btn-label">下雪</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="snowy" aria-label="复制下雪代码">📋</button>
+          </div>
+          <div class="weather-item">
+            <button class="weather-btn" data-weather="foggy">
+              <span class="btn-icon">🌫️</span>
+              <span class="btn-label">雾天</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="foggy" aria-label="复制雾天代码">📋</button>
+          </div>
+          <div class="weather-item">
+            <button class="weather-btn" data-weather="windy">
+              <span class="btn-icon">💨</span>
+              <span class="btn-label">大风</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="windy" aria-label="复制大风代码">📋</button>
+          </div>
+          <div class="weather-item">
+            <button class="weather-btn" data-weather="hail">
+              <span class="btn-icon">🧊</span>
+              <span class="btn-label">冰雹</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="hail" aria-label="复制冰雹代码">📋</button>
+          </div>
+          <div class="weather-item">
+            <button class="weather-btn" data-weather="night-clear">
+              <span class="btn-icon">🌙</span>
+              <span class="btn-label">晴夜</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="night-clear" aria-label="复制晴夜代码">📋</button>
+          </div>
+          <div class="weather-item">
+            <button class="weather-btn" data-weather="night-cloudy">
+              <span class="btn-icon">🌥️</span>
+              <span class="btn-label">多云夜</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="night-cloudy" aria-label="复制多云夜代码">📋</button>
+          </div>
+          <div class="weather-item">
+            <button class="weather-btn" data-weather="tornado">
+              <span class="btn-icon">🌪️</span>
+              <span class="btn-label">龙卷风</span>
+            </button>
+            <button class="quick-copy-btn" data-weather="tornado" aria-label="复制龙卷风代码">📋</button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>
