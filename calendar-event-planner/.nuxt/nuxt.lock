@@ -1,0 +1,9 @@
+{
+  "pid": 69094,
+  "startedAt": 1778552377726,
+  "command": "dev",
+  "cwd": "/Users/lizhenhu/Desktop/zhihe-0508-4/calendar-event-planner",
+  "port": 3004,
+  "hostname": "::1",
+  "url": "http://[::1]:3004"
+}
