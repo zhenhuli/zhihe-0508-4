@@ -1,0 +1,156 @@
+.app {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 24px 40px;
+  box-shadow: 0 2px 10px rgba(102, 126, 234, 0.3);
+
+  h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
+
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 40px;
+}
+
+.controls {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  label {
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+  }
+}
+
+.select {
+  padding: 10px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  min-width: 200px;
+
+  &:focus {
+    outline: none;
+    border-color: #667eea;
+  }
+}
+
+.period-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.period-btn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: #667eea;
+    color: #667eea;
+  }
+
+  &.active {
+    background: #667eea;
+    border-color: #667eea;
+    color: white;
+  }
+}
+
+.stats-panel {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.stock-info {
+  h2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+  }
+
+  .stock-name {
+    color: #666;
+    font-size: 14px;
+  }
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  flex: 1;
+  min-width: 500px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #999;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+
+  &.up {
+    color: #ef4444;
+  }
+
+  &.down {
+    color: #22c55e;
+  }
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: #999;
+  font-size: 14px;
+}

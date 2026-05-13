@@ -1,9 +1,0 @@
-{
-  "pid": 48157,
-  "startedAt": 1778643060496,
-  "command": "dev",
-  "cwd": "/Users/lizhenhu/Desktop/zhihe-0508-4/yoga-pose-library",
-  "port": 3002,
-  "hostname": "::1",
-  "url": "http://[::1]:3002"
-}
