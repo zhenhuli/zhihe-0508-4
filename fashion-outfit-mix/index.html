@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时尚搭配师 - Fashion Outfit Mix</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👗 时尚搭配师</h1>
+            <p>上传你的衣物，打造完美穿搭</p>
+        </header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <div class="upload-section">
+                    <h2>📤 上传衣物</h2>
+                    <button class="btn btn-primary upload-btn" id="uploadBtn">+ 添加衣物</button>
+                </div>
+
+                <div class="wardrobe-section">
+                    <h2>👕 我的衣柜</h2>
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">全部</button>
+                        <button class="filter-btn" data-filter="top">上衣</button>
+                        <button class="filter-btn" data-filter="bottom">下装</button>
+                        <button class="filter-btn" data-filter="outer">外套</button>
+                        <button class="filter-btn" data-filter="dress">连衣裙</button>
+                        <button class="filter-btn" data-filter="shoes">鞋子</button>
+                        <button class="filter-btn" data-filter="accessory">配饰</button>
+                    </div>
+                    <div class="wardrobe-grid" id="wardrobeGrid"></div>
+                </div>
+            </aside>
+
+            <main class="outfit-builder">
+                <div class="builder-header">
+                    <h2>✨ 搭配区域</h2>
+                    <div class="season-selector">
+                        <label>季节分类：</label>
+                        <select id="outfitSeason">
+                            <option value="spring">🌸 春季</option>
+                            <option value="summer">☀️ 夏季</option>
+                            <option value="autumn">🍂 秋季</option>
+                            <option value="winter">❄️ 冬季</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="outfit-canvas" id="outfitCanvas">
+                    <div class="canvas-placeholder">
+                        <p>从左侧衣柜拖拽衣物到这里进行搭配</p>
+                    </div>
+                </div>
+
+                <div class="builder-actions">
+                    <button class="btn btn-secondary" id="clearBtn">清空搭配</button>
+                    <button class="btn btn-primary" id="saveBtn">💾 保存搭配</button>
+                </div>
+            </main>
+
+            <aside class="saved-outfits">
+                <h2>📁 已保存搭配</h2>
+                <div class="season-filters">
+                    <button class="season-btn active" data-season="all">全部</button>
+                    <button class="season-btn" data-season="spring">🌸 春</button>
+                    <button class="season-btn" data-season="summer">☀️ 夏</button>
+                    <button class="season-btn" data-season="autumn">🍂 秋</button>
+                    <button class="season-btn" data-season="winter">❄️ 冬</button>
+                </div>
+                <div class="saved-grid" id="savedGrid"></div>
+            </aside>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h3>搭配详情</h3>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="uploadModal">
+        <div class="modal-content upload-modal-content">
+            <span class="close-btn" id="closeUploadModal">&times;</span>
+            <h3>📤 上传衣物</h3>
+            <div class="modal-body">
+                <div class="upload-area-modal" id="uploadAreaModal">
+                    <input type="file" id="fileInputModal" accept="image/*" multiple hidden>
+                    <div class="upload-placeholder">
+                        <span class="upload-icon">+</span>
+                        <p>点击或拖拽上传图片</p>
+                    </div>
+                </div>
+                <div class="preview-container" id="previewContainer"></div>
+                <div class="category-select-modal">
+                    <label>衣物类型：</label>
+                    <select id="clothingCategoryModal">
+                        <option value="top">上衣</option>
+                        <option value="bottom">下装</option>
+                        <option value="outer">外套</option>
+                        <option value="dress">连衣裙</option>
+                        <option value="shoes">鞋子</option>
+                        <option value="accessory">配饰</option>
+                    </select>
+                </div>
+                <div class="modal-actions">
+                    <button class="btn btn-secondary" id="cancelUploadBtn">取消</button>
+                    <button class="btn btn-primary" id="confirmUploadBtn">确认添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
