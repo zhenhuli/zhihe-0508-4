@@ -1,0 +1,13 @@
+{
+  "name": "svg-animation-gallery",
+  "version": "1.0.0",
+  "description": "SVG创意动画展示页",
+  "scripts": {
+    "dev": "npx live-server --port=3000",
+    "build": "npx lessc css/main.less css/main.css"
+  },
+  "devDependencies": {
+    "less": "^4.2.0",
+    "live-server": "^1.2.2"
+  }
+}

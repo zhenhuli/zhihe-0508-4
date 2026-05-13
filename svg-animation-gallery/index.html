@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG 创意动画展示</title>
+    <link rel="stylesheet/less" type="text/css" href="css/main.less">
+    <script src="https://cdn.jsdelivr.net/npm/less@4.2.0/dist/less.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>SVG 创意动画画廊</h1>
+            <p class="subtitle">点击卡片切换动画效果</p>
+        </header>
+
+        <nav class="nav-tabs">
+            <button class="nav-tab active" data-category="icon">动态图标</button>
+            <button class="nav-tab" data-category="path">路径动画</button>
+            <button class="nav-tab" data-category="morph">形变动画</button>
+            <button class="nav-tab" data-category="extra">更多动画</button>
+        </nav>
+
+        <main class="gallery">
+            <section class="gallery-section active" id="icon-section">
+                <div class="animation-card" data-animation="menu">
+                    <div class="svg-wrapper" id="menu-icon"></div>
+                    <h3>菜单图标</h3>
+                    <p>点击切换菜单 ↔ 箭头</p>
+                </div>
+                <div class="animation-card" data-animation="heart">
+                    <div class="svg-wrapper" id="heart-icon"></div>
+                    <h3>心跳动画</h3>
+                    <p>点击触发心跳效果</p>
+                </div>
+                <div class="animation-card" data-animation="loading">
+                    <div class="svg-wrapper" id="loading-icon"></div>
+                    <h3>加载动画</h3>
+                    <p>点击切换加载状态</p>
+                </div>
+            </section>
+
+            <section class="gallery-section" id="path-section">
+                <div class="animation-card" data-animation="draw">
+                    <div class="svg-wrapper" id="path-draw"></div>
+                    <h3>路径绘制</h3>
+                    <p>点击绘制/擦除路径</p>
+                </div>
+                <div class="animation-card" data-animation="follow">
+                    <div class="svg-wrapper" id="path-follow"></div>
+                    <h3>路径跟随</h3>
+                    <p>点击启动跟随动画</p>
+                </div>
+                <div class="animation-card" data-animation="wave">
+                    <div class="svg-wrapper" id="path-wave"></div>
+                    <h3>波浪动画</h3>
+                    <p>点击播放波浪效果</p>
+                </div>
+            </section>
+
+            <section class="gallery-section" id="morph-section">
+                <div class="animation-card" data-animation="circle-square">
+                    <div class="svg-wrapper" id="morph-circle"></div>
+                    <h3>圆形 ↔ 方形</h3>
+                    <p>点击切换形状</p>
+                </div>
+                <div class="animation-card" data-animation="star-heart">
+                    <div class="svg-wrapper" id="morph-star"></div>
+                    <h3>星形 ↔ 心形</h3>
+                    <p>点击切换形状</p>
+                </div>
+                <div class="animation-card" data-animation="transform">
+                    <div class="svg-wrapper" id="morph-transform"></div>
+                    <h3>多形变</h3>
+                    <p>点击循环变换</p>
+                </div>
+            </section>
+
+            <section class="gallery-section" id="extra-section">
+                <div class="animation-card" data-animation="spinner">
+                    <div class="svg-wrapper" id="spinner"></div>
+                    <h3>旋转加载器</h3>
+                    <p>点击启动/停止旋转</p>
+                </div>
+                <div class="animation-card" data-animation="pulse">
+                    <div class="svg-wrapper" id="pulse"></div>
+                    <h3>脉冲波纹</h3>
+                    <p>点击播放脉冲效果</p>
+                </div>
+                <div class="animation-card" data-animation="progress">
+                    <div class="svg-wrapper" id="progress"></div>
+                    <h3>进度条</h3>
+                    <p>点击切换0% ↔ 100%</p>
+                </div>
+                <div class="animation-card" data-animation="particle">
+                    <div class="svg-wrapper" id="particle"></div>
+                    <h3>粒子爆炸</h3>
+                    <p>点击触发爆炸效果</p>
+                </div>
+                <div class="animation-card" data-animation="toggle">
+                    <div class="svg-wrapper" id="toggle"></div>
+                    <h3>开关切换</h3>
+                    <p>点击切换开/关状态</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
