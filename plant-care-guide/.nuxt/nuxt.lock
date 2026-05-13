@@ -1,0 +1,9 @@
+{
+  "pid": 34983,
+  "startedAt": 1778636003683,
+  "command": "dev",
+  "cwd": "/Users/lizhenhu/Desktop/zhihe-0508-4/plant-care-guide",
+  "port": 3000,
+  "hostname": "::1",
+  "url": "http://[::1]:3000"
+}
