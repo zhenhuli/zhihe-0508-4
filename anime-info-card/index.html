@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动漫信息卡片展示站</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>🎬 动漫信息卡片展示站</h1>
+        <div class="filter-tags">
+            <button class="filter-btn active" data-category="all">全部</button>
+            <button class="filter-btn" data-category="action">热血</button>
+            <button class="filter-btn" data-category="romance">恋爱</button>
+            <button class="filter-btn" data-category="fantasy">奇幻</button>
+            <button class="filter-btn" data-category="slice">日常</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="cards-grid" id="cardsGrid">
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
