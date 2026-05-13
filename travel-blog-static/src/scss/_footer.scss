@@ -1,0 +1,40 @@
+.footer {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing-lg 0 $spacing-sm;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: $spacing-lg;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    margin-bottom: $spacing-md;
+    color: $secondary-color;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.8);
+    transition: $transition;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    padding-top: $spacing-md;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+  }
+}

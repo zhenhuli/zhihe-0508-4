@@ -1,0 +1,55 @@
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: $spacing-lg;
+}
+
+.destination-card {
+  background: white;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $shadow;
+
+  &__image {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: $spacing-md;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    margin-bottom: $spacing-xs;
+    color: $primary-color;
+  }
+
+  &__location {
+    color: $secondary-color;
+    font-size: 0.9rem;
+    margin-bottom: $spacing-sm;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+
+  &__description {
+    color: $text-light;
+    margin-bottom: $spacing-md;
+  }
+
+  &__highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+  }
+
+  &__highlight {
+    background-color: $light-color;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: $text-color;
+  }
+}

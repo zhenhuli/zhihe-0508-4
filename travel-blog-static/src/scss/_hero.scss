@@ -1,0 +1,21 @@
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=beautiful%20mountain%20landscape%20travel%20destination&image_size=landscape_16_9') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 8rem 0;
+
+  &__title {
+    font-size: 3rem;
+    margin-bottom: $spacing-sm;
+
+    @media (max-width: $breakpoint-md) {
+      font-size: 2rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    margin-bottom: $spacing-lg;
+    opacity: 0.9;
+  }
+}

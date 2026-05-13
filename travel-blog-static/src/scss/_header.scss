@@ -1,0 +1,66 @@
+.header {
+  background-color: $primary-color;
+  color: white;
+  padding: $spacing-sm 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: $shadow;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  &__nav {
+    display: flex;
+    gap: $spacing-md;
+
+    @media (max-width: $breakpoint-md) {
+      position: fixed;
+      top: 60px;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 60px);
+      background-color: $primary-color;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: $transition;
+
+      &.active {
+        left: 0;
+      }
+    }
+  }
+
+  &__link {
+    color: white;
+    transition: $transition;
+
+    &:hover,
+    &.active {
+      color: $secondary-color;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    @media (max-width: $breakpoint-md) {
+      display: block;
+    }
+  }
+}
